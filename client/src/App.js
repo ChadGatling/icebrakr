@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Map from "./components/Map";
+// import logo from './logo.svg';
 import './App.css';
 
+// Modules
+
+const mapApi = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAXqBRpEhk0PjeW03sann5iSRNZEyBn4ew&callback=this.initMap"
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+	state = {
+
+	};
+
+    render() {
+        return (
+            <div>
+            	<Map/>
+            </div>
+        );
+    }
 }
 
 export default App;
