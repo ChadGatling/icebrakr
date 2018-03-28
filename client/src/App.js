@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Map from "./components/Map";
 // import logo from './logo.svg';
 import './App.css';
 
 // Modules
 
-const mapApi = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAXqBRpEhk0PjeW03sann5iSRNZEyBn4ew&callback=this.initMap"
+// Components
+import Home from "./pages/Home";
 
 class App extends Component {
 	state = {
@@ -15,7 +15,7 @@ class App extends Component {
     render() {
         return (
             <div>
-            	<Map/>
+            	<Home/>
             </div>
         );
     }
