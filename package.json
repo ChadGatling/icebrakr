@@ -19,7 +19,8 @@
     "installDeps": "yarn && cd client && yarn"
   },
   "devDependencies": {
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.2"
   },
   "dependencies": {
     "@types/googlemaps": "^3.30.8",
