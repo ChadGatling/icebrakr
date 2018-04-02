@@ -47,7 +47,7 @@ class Home extends Component {
                         radius={500}
                         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXqBRpEhk0PjeW03sann5iSRNZEyBn4ew&v=3.exp&libraries=geometry,drawing,places"
                         loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `1000px` }} />}
+                        containerElement={<div style={{ height: `calc(100vh - 30px)` }} />}
                         mapElement={<div style={{ height: `100%` }} />}/>
                 </div>
             </div>
