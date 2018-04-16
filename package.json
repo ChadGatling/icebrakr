@@ -6,9 +6,6 @@
   "repository": "git@github.com:ewendel88/icebrakr.git",
   "author": "Elliott Wendel <ewendel88@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": "8.10.0"
-  },
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
@@ -26,9 +23,11 @@
     "@types/googlemaps": "^3.30.8",
     "@types/markerclustererplus": "^2.1.33",
     "@types/react": "^16.1.0",
+    "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "^1.1.1"
   }
 }

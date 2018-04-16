@@ -6,7 +6,9 @@ import './App.css';
 // Modules
 
 // Components
-import Home from "./pages/Home";
+import Location from "./pages/Location";
+import Welcome from "./pages/Welcome";
+import Nav from "./components/Nav";
 
 class App extends Component {
 	state = {
@@ -18,10 +20,18 @@ class App extends Component {
             <div>
                 <Router>
 					<div>
+						<Nav />
 						<Switch /> 
-							<Route exact path="/" component={Home} />
+							<Route exact path="/" component={Welcome} />
+							<Route exact path="/location" component={Location} />
 					</div>
 				</Router>
+				<footer className="footer">
+					<div className="two-toned-footer-color"></div>
+					<p className="text-muted text-muted-footer text-center">
+						&copy; Copyright 2018 Elliott Wendel
+					</p>
+				</footer>
             </div>
         );
     }

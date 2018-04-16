@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Atlas from "../../components/Atlas";
 
-class Home extends Component {
+class Location extends Component {
     state = {
         lat: 30.267,
         lng: -97.743
@@ -47,7 +47,7 @@ class Home extends Component {
                         radius={500}
                         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXqBRpEhk0PjeW03sann5iSRNZEyBn4ew&v=3.exp&libraries=geometry,drawing,places"
                         loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `calc(100vh - 30px)` }} />}
+                        containerElement={<div style={{ height: `calc(100vh - 96px)` }} />}
                         mapElement={<div style={{ height: `100%` }} />}/>
                 </div>
             </div>
@@ -55,4 +55,4 @@ class Home extends Component {
     }
 };
 
-export default Home;
+export default Location;
