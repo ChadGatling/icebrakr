@@ -59,7 +59,7 @@ class Nav extends Component {
 								</div>
 							</li>*/}
 							<li className="nav-item">
-								<a className="nav-link" href="/SignUp">Sign up</a>
+								<a className="nav-link" href="/signup">Sign up</a>
 							</li>
 						</ul>
 						{/*<form className="form-inline my-2 my-lg-0">

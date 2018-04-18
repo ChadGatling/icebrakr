@@ -12,7 +12,7 @@ import Nav from "./components/Nav";
 // import Account from "./page/Account";
 import Landing from "./pages/Landing";
 import Location from "./pages/Location";
-// import LogIn from "./pages/LogIn"; 
+import LogIn from "./pages/LogIn"; 
 import SignUp from "./pages/SignUp";
 
 class App extends Component {
@@ -33,7 +33,8 @@ class App extends Component {
 						<Switch /> 
 							<Route exact path="/" component={Landing} />
 							<Route exact path="/location" component={Location} />
-							<Route exact path="/signUp" component={SignUp} />
+							<Route exact path="/login" component={LogIn} />
+							<Route exact path="/signup" component={SignUp} />
 					</div>
 				</Router>
 				<footer className="">

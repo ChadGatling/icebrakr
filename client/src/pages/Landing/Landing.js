@@ -8,8 +8,6 @@ class Landing extends Component {
 
 	};
 
-
-
 	render() {
 		return(
 		<div className="container mt-2">
@@ -22,14 +20,15 @@ class Landing extends Component {
 					<div className="col-sm">
 						<Button
 							children="Log in"
-							className="form-control btn btn-light" 
+							className="form-control btn btn-light"
+							onClick={() => this.props.history.push("/login")}
 						/>
 					</div>
 					<div className="col-sm">
 						<Button
 							children="Sign up"
 							className="form-control btn btn-light"
-							onClick={() => this.props.history.push("/signUp")}
+							onClick={() => this.props.history.push("/signup")}
 						/>
 					</div>
 				</div>
