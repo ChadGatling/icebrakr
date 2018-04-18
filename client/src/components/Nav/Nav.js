@@ -47,6 +47,15 @@ class Nav extends Component {
 							<li className="nav-item">
 								<a className="nav-link" href="/location">Map</a>
 							</li>
+							<li className="nav-item">
+								<a className="nav-link" href="/signup">Sign up</a>
+							</li>
+							<li className="nav-item">
+								<a className="nav-link" href="/login">Log in</a>
+							</li>
+							<li className="nav-item">
+								<a className="nav-link" href="/account">Account</a>
+							</li>
 							{/*<li className="nav-item dropdown">
 								<a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									Dropdown
@@ -58,9 +67,6 @@ class Nav extends Component {
 									<a className="dropdown-item" href="#">Something else here</a>
 								</div>
 							</li>*/}
-							<li className="nav-item">
-								<a className="nav-link" href="/signup">Sign up</a>
-							</li>
 						</ul>
 						{/*<form className="form-inline my-2 my-lg-0">
 							<input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />

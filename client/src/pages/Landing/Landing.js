@@ -12,7 +12,7 @@ class Landing extends Component {
 		return(
 		<div className="container mt-2">
 			<h4 className="">
-				Sign into you account or sign up to start breaking the ice.
+				Sign in to your account or sign up to start breaking the ice.
 			</h4>
 			<hr/>
 			<form className="form-group">

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './SignUp.css';
 
 //Components
 import {Button, Input} from "../../components/Form";
@@ -17,7 +18,7 @@ class SignUp extends Component {
 
 	render() {
 		return(
-		<div className="container mt-2 text-primary">
+		<div className="container mt-2">
 			<h4>Just answer a few questions and Hit the Ice to start breaking.</h4>
 			<hr/>
 			<form className="form-group">

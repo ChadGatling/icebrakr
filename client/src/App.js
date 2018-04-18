@@ -9,7 +9,7 @@ import './App.css';
 import Nav from "./components/Nav";
 
 //Pages
-// import Account from "./page/Account";
+import Account from "./pages/Account";
 import Landing from "./pages/Landing";
 import Location from "./pages/Location";
 import LogIn from "./pages/LogIn"; 
@@ -32,6 +32,7 @@ class App extends Component {
 						<Nav />
 						<Switch /> 
 							<Route exact path="/" component={Landing} />
+							<Route exact path="/account" component={Account} />
 							<Route exact path="/location" component={Location} />
 							<Route exact path="/login" component={LogIn} />
 							<Route exact path="/signup" component={SignUp} />
