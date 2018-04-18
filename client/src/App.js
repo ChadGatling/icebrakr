@@ -6,29 +6,38 @@ import './App.css';
 // Modules
 
 // Components
-import Location from "./pages/Location";
-import Welcome from "./pages/Welcome";
 import Nav from "./components/Nav";
+
+//Pages
+// import Account from "./page/Account";
+import Landing from "./pages/Landing";
+import Location from "./pages/Location";
+// import LogIn from "./pages/LogIn"; 
+import SignUp from "./pages/SignUp";
 
 class App extends Component {
 	state = {
 
 	};
 
+	style = {
+		minHeight: "100%"
+	};
+
     render() {
         return (
-            <div>
+            <div className="">
                 <Router>
 					<div>
 						<Nav />
 						<Switch /> 
-							<Route exact path="/" component={Welcome} />
+							<Route exact path="/" component={Landing} />
 							<Route exact path="/location" component={Location} />
+							<Route exact path="/signUp" component={SignUp} />
 					</div>
 				</Router>
-				<footer className="footer">
-					<div className="two-toned-footer-color"></div>
-					<p className="text-muted text-muted-footer text-center">
+				<footer className="">
+					<p className="text-muted text-center">
 						&copy; Copyright 2018 Elliott Wendel
 					</p>
 				</footer>

@@ -32,9 +32,9 @@ class Nav extends Component {
 
 	render() {
 		return(
-			<div style={ Style }>
+			<div className="">
 				<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-					<a className="navbar-brand" href="#">iceBrakr</a>
+					<a className="navbar-brand" href="/">iceBrakr</a>
 					<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>
 					</button>
@@ -59,7 +59,7 @@ class Nav extends Component {
 								</div>
 							</li>*/}
 							<li className="nav-item">
-								<a className="nav-link" href="#">Disabled</a>
+								<a className="nav-link" href="/SignUp">Sign up</a>
 							</li>
 						</ul>
 						{/*<form className="form-inline my-2 my-lg-0">
