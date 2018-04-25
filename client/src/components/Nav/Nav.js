@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import {withRouter} from "react-router-dom";
 import API from "../../utils/API";
 
-var Style = {
-	color: "white"
-    // backgroundImage: "url(https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/karaoke-background_GJWDxYBO_SB_PM.jpg)"
-};
+// var Style = {
+// 	color: "white"
+//     // backgroundImage: "url(https://d1yn1kh78jj1rr.cloudfront.net/image/preview/rDtN98Qoishumwih/karaoke-background_GJWDxYBO_SB_PM.jpg)"
+// };
 
 class Nav extends Component {
 	state = {
@@ -42,7 +42,7 @@ class Nav extends Component {
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul className="navbar-nav mr-auto">
 							<li className="nav-item active">
-								<a className="nav-link" href="#">Home {/*<span className="sr-only">(current)</span>*/}</a>
+								<a className="nav-link" href="/">Home {/*<span className="sr-only">(current)</span>*/}</a>
 							</li>
 							<li className="nav-item">
 								<a className="nav-link" href="/location">Map</a>

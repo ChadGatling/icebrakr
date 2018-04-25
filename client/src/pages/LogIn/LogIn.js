@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import API from "../../utils/API";
 
 //Components
 import {Input, Button} from "../../components/Form";
@@ -6,6 +7,22 @@ import {Input, Button} from "../../components/Form";
 class LogIn extends Component {
 	state = {
 
+	};
+
+	handleInputChange = event => {
+		const { name, value } = event.target;
+		this.setState({
+			[name]: value
+		});
+	};
+
+	handleSubmit = event => {
+		event.preventDefault();
+
+		API.logIn({
+			username: this.state.username,
+			password: this.state.password
+		})		
 	};
 
 	render() {
@@ -17,6 +34,7 @@ class LogIn extends Component {
 				{/*Username*/}
 				<Input
 					autoFocus
+					autoComplete="username"
 					className="form-control"
 					id="username"
 					name="username"
@@ -25,9 +43,10 @@ class LogIn extends Component {
 					required
 					type="text"
 				/>
-				<label for="username">Username</label>
+				<label htmlFor="username">Username</label>
 				{/*Password*/}
 				<Input
+					autoComplete="current-password"
 					className="form-control"
 					id="password"
 					name="password"
@@ -36,11 +55,12 @@ class LogIn extends Component {
 					required
 					type="password"
 				/>
-				<label for="password">Password</label>
+				<label htmlFor="password">Password</label>
 				<Button
 					children="Hit the Ice"
 					className="form-control btn btn-light"
 					onClick={this.handleSubmit}
+					type="submit"
 				/>
 			</form>
 			<hr/>

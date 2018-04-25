@@ -2,6 +2,7 @@
   "name": "icebrakr",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@types/googlemaps": "^3.30.8",
     "@types/markerclustererplus": "^2.1.33",
