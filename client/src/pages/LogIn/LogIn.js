@@ -17,12 +17,12 @@ class LogIn extends Component {
 	};
 
 	handleSubmit = event => {
-		event.preventDefault();
+		event.preventDefault();				
 
 		API.logIn({
 			username: this.state.username,
 			password: this.state.password
-		})		
+		}).then(response => {});	
 	};
 
 	render() {
@@ -30,11 +30,11 @@ class LogIn extends Component {
 		<div className="container mt-2">
 			<h4>Welcome back! log in to break the ice.</h4>
 			<hr/>
-			<form className="form-group">
+			<form className="form-group" onSubmit={this.handleSubmit}>
 				{/*Username*/}
 				<Input
-					autoFocus
 					autoComplete="username"
+					autoFocus
 					className="form-control"
 					id="username"
 					name="username"
@@ -59,7 +59,6 @@ class LogIn extends Component {
 				<Button
 					children="Hit the Ice"
 					className="form-control btn btn-light"
-					onClick={this.handleSubmit}
 					type="submit"
 				/>
 			</form>

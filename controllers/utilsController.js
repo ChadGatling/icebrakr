@@ -1,4 +1,5 @@
 const db = require("../models");
+// const bcrypt = require("bcrypt");
 
 module.exports = {
 	session: (req, res) => {
@@ -8,13 +9,24 @@ module.exports = {
 	logIn: (req, res) => {
 		console.log("Login", req.body);
 		db.User
-			.findOne({username: req.body.username}, {"username": 1, "password": 1})
+			.findOne({username: req.body.username}, "password")
 			.then(dbModel => {
-				console.log("dbModel", dbModel);
-				res.send(dbModel)
+				// console.log("dbModel", dbModel);
+				if (dbModel) {
+					if (dbModel.password === req.body.password) {
+						console.log("Session", req.session);
+						req.session._id = dbModel._id;
+						console.log("Session", req.session);
+						res.send("granted")
+					} else {
+						res.send("Password incorrect.")
+					}
+				} else {
+					res.send("Username incorrect.")
+				}
 			})
 			.catch(err => {
-			res.status(422).json(err)
+				res.status(422).json(err)
 		});
 	}
 }

@@ -16,14 +16,19 @@ class SignUp extends Component {
 		})
 	};
 
+	handleSubmit = event => {
+		event.preventDefault();
+	};
+
 	render() {
 		return(
 		<div className="container mt-2">
 			<h4>Just answer a few questions and Hit the Ice to start breaking.</h4>
 			<hr/>
-			<form className="form-group">
+			<form className="form-group" onSubmit={this.handleSubmit}>
 				{/*Username*/}
 				<Input
+					autoComplete="username"
 					autoFocus
 					className="form-control"
 					id="username"
@@ -92,7 +97,6 @@ class SignUp extends Component {
 				<Button
 					children="Hit the Ice"
 					className="form-control btn btn-light"
-					onClick={this.handleSubmit}
 				/>
 			</form>
 			<hr/>

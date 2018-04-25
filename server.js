@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const session = require("express-session");
+// const validator = require("express-validator");
 
 const router = require("express").Router();
 const routes = require("./routes");
@@ -23,6 +24,9 @@ app.use(session({
 	saveUninitialized: true, 
 	cookie: { maxAge: 1000 * 60 * 10 }
 }));
+
+// Validator
+app.use(validator());
 
 // Add routes, both API and view
 app.use(routes);
