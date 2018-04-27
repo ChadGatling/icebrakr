@@ -20,6 +20,10 @@ class SignUp extends Component {
 		event.preventDefault();
 	};
 
+	checkUsername = () => {
+
+	};
+
 	render() {
 		return(
 		<div className="container mt-2">

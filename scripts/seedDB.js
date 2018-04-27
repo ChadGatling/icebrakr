@@ -8,6 +8,13 @@ mongoose.connect(
 
 const userSeed = [
 	{
+		access: "test",
+		firstName: "TestFirst",
+		lastName: "TestLast",
+		password: "TestPass",
+		username: "TestUser"
+	},
+	{
 		access: "admin",
 		firstName: "Elliott",
 		lastName: "Wendel",

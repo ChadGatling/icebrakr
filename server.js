@@ -26,7 +26,7 @@ app.use(session({
 }));
 
 // Validator
-app.use(validator());
+// app.use(validator());
 
 // Add routes, both API and view
 app.use(routes);
