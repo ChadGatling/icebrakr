@@ -55,7 +55,7 @@ class LogIn extends Component {
 	checkUsername = () => {
 		switch (this.state.validation) {
 			case "username":
-				return <span className="text-danger">Sorry, that username can't be found</span>;
+				return <span className="text-danger">Sorry, that username was not found</span>;
 				break;
 			case "password":
 				return <span className="text-success">Username found &#10004;</span>
@@ -87,6 +87,12 @@ class LogIn extends Component {
 				break;
 			case "granted":
 				return <span className="text-success">Password valid &#10004;</span>;
+				break;
+			case "noPassword":
+				return <span className="test-danger">You must enter a password</span>;
+				break;
+			case "noInput":
+				return <span className="test-danger">You must enter a password</span>;
 				break;
 			case "submitted":
 				return "Checking...";

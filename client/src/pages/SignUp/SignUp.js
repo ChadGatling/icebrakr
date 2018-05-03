@@ -29,7 +29,7 @@ class SignUp extends Component {
 		<div className="container mt-2">
 			<h4>Just answer a few questions and Hit the Ice to start breaking.</h4>
 			<hr/>
-			<form className="form-group" onSubmit={this.handleSubmit}>
+			<form className="form-group" noValidate onSubmit={this.handleSubmit}>
 				{/*Username*/}
 				<Input
 					autoComplete="username"
