@@ -6,7 +6,7 @@ module.exports = {
         // console.log("Session", req.session);
         if (req.session) {
             db.User
-                .findById(req.session.userId, "-password")
+                .findById(req.session._id, "-password")
                 .then(dbModel => res.json(dbModel))
                 .catch(err => res.status(422).json(err));
         } else {

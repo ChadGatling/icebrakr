@@ -9,6 +9,7 @@ mongoose.connect(
 const userSeed = [
 	{
 		access: "test",
+		email: "test@test.com",
 		firstName: "TestFirst",
 		lastName: "TestLast",
 		password: "TestPass",
@@ -16,6 +17,7 @@ const userSeed = [
 	},
 	{
 		access: "admin",
+		email: "ewendel88@gmail.com",
 		firstName: "Elliott",
 		lastName: "Wendel",
 		password: "password",

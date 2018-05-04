@@ -4,7 +4,7 @@ import API from "../../utils/API";
 //Components
 import {Input, Button} from "../../components/Form";
 
-console.log("Domain", document.domain);
+// console.log("Domain", document.domain);
 
 class LogIn extends Component {
 	state = {
@@ -56,22 +56,16 @@ class LogIn extends Component {
 		switch (this.state.validation) {
 			case "username":
 				return <span className="text-danger">Sorry, that username was not found</span>;
-				break;
 			case "password":
 				return <span className="text-success">Username found &#10004;</span>
-				break;
 			case "granted":
 				return <span className="text-success">Username found &#10004;</span>;
-				break;
 			case "noUsername":
-				return <span className="test-danger">You must enter a username</span>;
-				break;
+				return <span className="text-danger">You must enter a username</span>;
 			case "noInput":
-				return <span className="test-danger">You must enter a username</span>;
-				break;
+				return <span className="text-danger">You must enter a username</span>;
 			case "submitted":
 				return "Checking...";
-				break;
 			default:
 				return "Username";
 		}
@@ -81,22 +75,16 @@ class LogIn extends Component {
 		switch (this.state.validation) {
 			case "username":
 				return "Please use a valid username to check password";
-				break;
 			case "password":
 				return <span className="text-danger">Sorry that password is incorrect</span>;
-				break;
 			case "granted":
 				return <span className="text-success">Password valid &#10004;</span>;
-				break;
 			case "noPassword":
-				return <span className="test-danger">You must enter a password</span>;
-				break;
+				return <span className="text-danger">You must enter a password</span>;
 			case "noInput":
-				return <span className="test-danger">You must enter a password</span>;
-				break;
+				return <span className="text-danger">You must enter a password</span>;
 			case "submitted":
 				return "Checking...";
-				break;
 			default:
 				return "Password";
 		}

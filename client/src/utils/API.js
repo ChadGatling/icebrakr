@@ -13,5 +13,13 @@ export default {
     // Gets all users
 	getUsers: () => {
 		return axios.get("/api/users")
-	}
+    },
+    // Check to see if username is taken
+    uniqueUsername: (userName) => {
+        return axios.post("/api/users/" + userName)
+    },
+    // Add user to database
+    saveUser: (userData) => {
+        return axios.post("api/users", userData)
+    }
 }

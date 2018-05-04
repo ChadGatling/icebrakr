@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
 const session = require("express-session");
-// const validator = require("express-validator");
+const validator = require("express-validator");
 
 const router = require("express").Router();
 const routes = require("./routes");
@@ -26,7 +26,7 @@ app.use(session({
 }));
 
 // Validator
-// app.use(validator());
+app.use(validator());
 
 // Add routes, both API and view
 app.use(routes);

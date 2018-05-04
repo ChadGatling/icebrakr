@@ -12,6 +12,7 @@ router.route("/")
 router
     .route("/:id")
     .get(usersController.findByInfo)
+    .post(usersController.uniqueUsername)
     .put(usersController.update)
     .delete(usersController.remove);
 

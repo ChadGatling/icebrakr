@@ -8,18 +8,30 @@ class Account extends Component {
 
 	componentDidMount() {
 		API.session().then(response => {
-				console.log(response);
-		})
+			if (response.data) {				
+				this.setState({
+					access: response.data.access,
+					firstName: response.data.firstName,
+					lastName: response.data.lastName,
+					username: response.data.username
+				});
+			} else {
+
+			};
+		});
 	};
 
 	render() {
 		return(
-		<div>
-			Account page
-			username
-			name
-			email
-			other info
+		<div className="container mt-2">
+			<h3>Account Info</h3>
+				<div>
+					<div>Username: {this.state.username}</div>
+					<div>Name: {this.state.firstName} {this.state.lastName}</div>
+					<div>Access level: {this.state.access}</div>
+				</div>
+
+			<h3>other info</h3>	
 		</div>
 		)
 	}
