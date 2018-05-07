@@ -14,15 +14,17 @@ module.exports = {
 			if (dbModel[0]) {
 				res.send("username")
 			} else {
-				db.User.insertOne({
+				db.User.create({
 					username: req.body.username,
 					firstName: req.body.firstName,
 					lastName: req.body.lastName,
 					email: req.body.email,
-					password: req.body.password
-				}).then(
-					req.session._id = dbModel._id
-				)
+					password: req.body.password,
+					access: "user"
+				}).then(dbModel => {
+					req.session._id = dbModel._id;
+					res.send("created")
+				})
 			}
 		})
 	},

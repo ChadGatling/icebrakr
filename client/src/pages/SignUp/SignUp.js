@@ -44,7 +44,8 @@ class SignUp extends Component {
 				email: this.state.email,
 				password: this.state.password
 			}).then(response => {
-				this.setState({validation: response.data})
+				this.setState({validation: response.data});				
+				this.props.history.push("/account")
 			});
 		}
 	};

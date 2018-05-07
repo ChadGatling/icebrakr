@@ -10,7 +10,7 @@ module.exports = {
                 .then(dbModel => res.json(dbModel))
                 .catch(err => res.status(422).json(err));
         } else {
-            res.json("No req.session._id");
+            res.send("No req.session._id");
         }
     },
 	// Log in a user
