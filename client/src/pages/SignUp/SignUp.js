@@ -15,6 +15,10 @@ class SignUp extends Component {
 		passMatch:""
 	};
 
+	componentDidUpdate() {
+		// console.log(this.state)
+	};
+
 	handleInputChange = event => {
 		const { name, value } = event.target;
 		this.setState({
@@ -49,7 +53,7 @@ class SignUp extends Component {
 		if (this.state.validateUsername) {
 			if (this.state.usernameAvailable) {
 				return <span className="text-success">Username available &#10004;</span>
-			} else if (!this.state.usernameAvailable) {
+			} else if (this.state.usernameAvailable === false) {
 				return <span className="text-danger">Username unavailable!</span>
 			}else {
 				return <span>Checking username...</span>
@@ -178,6 +182,7 @@ class SignUp extends Component {
 				<label htmlFor="username">{this.usernameLabel()}</label>
 				{/*First name*/}
 				<Input
+					autoComplete="given-name"
 					className="form-control"
 					id="firstName"
 					name="firstName"
@@ -189,6 +194,7 @@ class SignUp extends Component {
 				<label htmlFor="firstName">{this.checkFirstName()}</label>
 				{/*Last name*/}
 				<Input
+					autoComplete="family-name"
 					className="form-control"
 					id="lastName"
 					name="lastName"
@@ -200,6 +206,7 @@ class SignUp extends Component {
 				<label htmlFor="lastName">{this.checkLastName()}</label>
 				{/*Email*/}
 				<Input
+					autoComplete="email"
 					className="form-control"
 					id="email"
 					name="email"
@@ -211,6 +218,7 @@ class SignUp extends Component {
 				<label htmlFor="email">{this.checkEmail()}</label>
 				{/*Password*/}
 				<Input
+					autoComplete="new-password"
 					className="form-control"
 					id="password"
 					name="password"
@@ -222,6 +230,7 @@ class SignUp extends Component {
 				<label htmlFor="password">{this.checkPassword()}</label>
 				{/*Password match*/}
 				<Input
+					autoComplete="new-password"
 					className="form-control"
 					id="passMatch"
 					name="passMatch"

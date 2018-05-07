@@ -14,7 +14,15 @@ module.exports = {
 			if (dbModel[0]) {
 				res.send("username")
 			} else {
-				res.send("User would have been created.")
+				db.User.insertOne({
+					username: req.body.username,
+					firstName: req.body.firstName,
+					lastName: req.body.lastName,
+					email: req.body.email,
+					password: req.body.password
+				}).then(
+					req.session._id = dbModel._id
+				)
 			}
 		})
 	},
@@ -34,7 +42,7 @@ module.exports = {
 
 		// Return any users that match the username attempted
 		db.User.find({username: casedUsername}, "username").then(dbModel => {
-			console.log("dbModel", dbModel)
+			// console.log("dbModel", dbModel)
 
 			// Is there is one already in database
 			if (dbModel[0]) {
