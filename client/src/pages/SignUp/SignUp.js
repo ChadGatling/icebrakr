@@ -49,7 +49,7 @@ class SignUp extends Component {
 		if (this.state.validateUsername) {
 			if (this.state.usernameAvailable) {
 				return <span className="text-success">Username available &#10004;</span>
-			} else if (!this.state.username) {
+			} else if (!this.state.usernameAvailable) {
 				return <span className="text-danger">Username unavailable!</span>
 			}else {
 				return <span>Checking username...</span>
